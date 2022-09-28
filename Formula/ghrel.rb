@@ -5,24 +5,24 @@
 class Ghrel < Formula
   desc ""
   homepage ""
-  version "0.1.8"
+  version "0.1.9"
   depends_on :macos
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/apigear-io/ghrel-releases/releases/download/0.1.8/ghrel-releases_0.1.8_darwin_arm64.tar.gz"
-      sha256 "2cdd1f5790f4f4b44e60bb1765419e967610bb06287efdaaaeefaffbeea8f66d"
+      url "https://github.com/apigear-io/ghrel-releases/releases/download/0.1.9/ghrel-releases_0.1.9_darwin_arm64.tar.gz"
+      sha256 "9e27fa95a3a0e02e9ddd59696b6a9399a903440aeae209d2a6cea93714464aca"
 
       def install
-        bin.install "ghrel-releases"
+        bin.install "ghrel"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/apigear-io/ghrel-releases/releases/download/0.1.8/ghrel-releases_0.1.8_darwin_amd64.tar.gz"
-      sha256 "ee86c1bed0f74691f650af23a47a584f592a05536930765e896c301ce938777e"
+      url "https://github.com/apigear-io/ghrel-releases/releases/download/0.1.9/ghrel-releases_0.1.9_darwin_amd64.tar.gz"
+      sha256 "9434fca14987678e1d9e7316f2dd815c947d2bf8b87093d0cffb124e11bc2cdf"
 
       def install
-        bin.install "ghrel-releases"
+        bin.install "ghrel"
       end
     end
   end
