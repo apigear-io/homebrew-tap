@@ -5,20 +5,20 @@
 class Apigear < Formula
   desc ""
   homepage ""
-  version "0.16.0"
+  version "0.16.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/apigear-io/cli-releases/releases/download/v0.16.0/apigear_0.16.0_darwin_amd64.tar.gz"
-      sha256 "8764a402c24a394d455e64571b873aabd5fa4da5e1a9e00e339c794d10ec81fc"
+      url "https://github.com/apigear-io/cli-releases/releases/download/v0.16.1/apigear_0.16.1_darwin_amd64.tar.gz"
+      sha256 "57965e7307c6e94856e6b216e8a815c7f74fa45ce6da020bd0742eb99a550f5a"
 
       def install
         bin.install "apigear"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/apigear-io/cli-releases/releases/download/v0.16.0/apigear_0.16.0_darwin_arm64.tar.gz"
-      sha256 "1979388b4270740c33c9f55108657f480f1833e389259b042d9bb17e9b1746e6"
+      url "https://github.com/apigear-io/cli-releases/releases/download/v0.16.1/apigear_0.16.1_darwin_arm64.tar.gz"
+      sha256 "1e189b132ab520c5815a80f1dbe706d1b247b2bfdb92391efe8f91780681fe07"
 
       def install
         bin.install "apigear"
@@ -27,17 +27,17 @@ class Apigear < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/apigear-io/cli-releases/releases/download/v0.16.0/apigear_0.16.0_linux_amd64.tar.gz"
-      sha256 "9973b8d07e8751f960e43db39779a25889c28baf5d669212867dedabfe72bbfc"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/apigear-io/cli-releases/releases/download/v0.16.1/apigear_0.16.1_linux_arm64.tar.gz"
+      sha256 "bb915c83007b71d9a9976a5c88599c5c5f6ec9ff4c99834aee104fdb98ed2be5"
 
       def install
         bin.install "apigear"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/apigear-io/cli-releases/releases/download/v0.16.0/apigear_0.16.0_linux_arm64.tar.gz"
-      sha256 "872a84bb62611d1c6080fbf1a4cf896fcc43efdcccbc20081177589d7c095024"
+    if Hardware::CPU.intel?
+      url "https://github.com/apigear-io/cli-releases/releases/download/v0.16.1/apigear_0.16.1_linux_amd64.tar.gz"
+      sha256 "7b904c49d20b387e4833f7ae2dd3597c661e9e5377f6d287bc1c84cb8df1c6a2"
 
       def install
         bin.install "apigear"
