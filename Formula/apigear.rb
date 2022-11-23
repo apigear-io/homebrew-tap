@@ -5,20 +5,20 @@
 class Apigear < Formula
   desc ""
   homepage ""
-  version "0.18.6"
+  version "0.18.8"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/apigear-io/cli-releases/releases/download/v0.18.6/apigear_darwin_arm64.zip"
-      sha256 "44345a655d35bc74a9d633710b88b67b5a5aea7dcc707eea68cdc7d089807b14"
+    if Hardware::CPU.intel?
+      url "https://github.com/apigear-io/cli-releases/releases/download/v0.18.8/apigear_darwin_amd64.zip"
+      sha256 "6dfd198b1574acbb54d7a9b242eeda005e62ad85114bcf821eb49a20ecd77c1a"
 
       def install
         bin.install "apigear"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/apigear-io/cli-releases/releases/download/v0.18.6/apigear_darwin_amd64.zip"
-      sha256 "49418801a6d345c2c098efc0d58e1382186084c7104927659e3021b87aac0344"
+    if Hardware::CPU.arm?
+      url "https://github.com/apigear-io/cli-releases/releases/download/v0.18.8/apigear_darwin_arm64.zip"
+      sha256 "720b974ae0f4658173bdc2dda03b288552f3ef321a113836a874e8c426df4cb9"
 
       def install
         bin.install "apigear"
@@ -27,17 +27,17 @@ class Apigear < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/apigear-io/cli-releases/releases/download/v0.18.6/apigear_linux_amd64.zip"
-      sha256 "e310431a3ed3610ca5c13e723453a820ffa25beb4148de24d9142d9499f64caf"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/apigear-io/cli-releases/releases/download/v0.18.8/apigear_linux_arm64.zip"
+      sha256 "b48ca3995941c23cee8af88aa3797ac456b48a37fbf0c4ccf89c2fc82b6d723b"
 
       def install
         bin.install "apigear"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/apigear-io/cli-releases/releases/download/v0.18.6/apigear_linux_arm64.zip"
-      sha256 "ada8fa8b94bcf4d2084097fb83cf125bb116c3b1d4a50cb667642704cfd52056"
+    if Hardware::CPU.intel?
+      url "https://github.com/apigear-io/cli-releases/releases/download/v0.18.8/apigear_linux_amd64.zip"
+      sha256 "b7b4fa4eb71da7a1c72e0d66e76007807a2e77522c38463cb1572bef261e2926"
 
       def install
         bin.install "apigear"
