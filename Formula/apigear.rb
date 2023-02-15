@@ -5,20 +5,20 @@
 class Apigear < Formula
   desc ""
   homepage ""
-  version "0.23.1"
+  version "0.23.2"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/apigear-io/cli-releases/releases/download/v0.23.1/apigear_darwin_amd64.zip"
-      sha256 "81b4446bf6ec6723ceabdfd223db513f07ab19d4239b308d0f68f36923dc70b1"
+      url "https://github.com/apigear-io/cli-releases/releases/download/v0.23.2/apigear_darwin_amd64.zip"
+      sha256 "bb4465a0e74f37bbdf2ce3d1b2ec8a66abbf55ff3495ef8d36a1bd54d7d7c42e"
 
       def install
         bin.install "apigear"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/apigear-io/cli-releases/releases/download/v0.23.1/apigear_darwin_arm64.zip"
-      sha256 "3f44b013d4e94c78fde148fef3fc6154911123671b5f03b6f7a31dd6c15a1128"
+      url "https://github.com/apigear-io/cli-releases/releases/download/v0.23.2/apigear_darwin_arm64.zip"
+      sha256 "034f322c07e9c3e0cd6cd96a3824f5f2e262550a35068cbe5018315cc030f27e"
 
       def install
         bin.install "apigear"
@@ -28,16 +28,16 @@ class Apigear < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/apigear-io/cli-releases/releases/download/v0.23.1/apigear_linux_arm64.zip"
-      sha256 "af6335c801c494e917ec53a4fb3eeba5904823f1d802b11666c22d2a059cd30f"
+      url "https://github.com/apigear-io/cli-releases/releases/download/v0.23.2/apigear_linux_arm64.zip"
+      sha256 "d7ba27981f2ddd5083bd3155710336459d136d034f4d1cfc7ecd38035e82cbbf"
 
       def install
         bin.install "apigear"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/apigear-io/cli-releases/releases/download/v0.23.1/apigear_linux_amd64.zip"
-      sha256 "278ef99cbb2c06fabf43f9762c790d6689f92c6bd96b8a55a4561e2a9f781e71"
+      url "https://github.com/apigear-io/cli-releases/releases/download/v0.23.2/apigear_linux_amd64.zip"
+      sha256 "949072536796efcad4ffccbd83e82b22ba3f750f9f34cac757f09b98540495de"
 
       def install
         bin.install "apigear"
