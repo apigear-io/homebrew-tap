@@ -5,20 +5,20 @@
 class Apigear < Formula
   desc ""
   homepage ""
-  version "0.28.2"
+  version "0.28.3"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/apigear-io/cli/releases/download/v0.28.2/apigear_darwin_amd64.zip"
-      sha256 "d2f939b5d2d1d14392f2021a03440fe605b6972634e0228759d4b0a354ea5faa"
+    if Hardware::CPU.arm?
+      url "https://github.com/apigear-io/cli/releases/download/v0.28.3/apigear_darwin_arm64.zip"
+      sha256 "4893cdcf4507f5cba988ad4bc8a38a98bf5b2a6be31285a4028c6795dc436f98"
 
       def install
         bin.install "apigear"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/apigear-io/cli/releases/download/v0.28.2/apigear_darwin_arm64.zip"
-      sha256 "e4c8ea945e66fb9db9461d52c14c71cf45fa3a9c26a1517e65ca6d5e80c99e2e"
+    if Hardware::CPU.intel?
+      url "https://github.com/apigear-io/cli/releases/download/v0.28.3/apigear_darwin_amd64.zip"
+      sha256 "2fc544043452747c00b8b9c2594a772a205a01febb5a4330c22f7c8e6aed451e"
 
       def install
         bin.install "apigear"
@@ -28,16 +28,16 @@ class Apigear < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/apigear-io/cli/releases/download/v0.28.2/apigear_linux_amd64.zip"
-      sha256 "c2bc36dc288577d4531eb28f1b57a009afef503b8d6b6d1d0e325dc511a802f3"
+      url "https://github.com/apigear-io/cli/releases/download/v0.28.3/apigear_linux_amd64.zip"
+      sha256 "7938116a7d619eaf530d16dedc9172bd41bea818b0cac3bcfe226e821face5cd"
 
       def install
         bin.install "apigear"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/apigear-io/cli/releases/download/v0.28.2/apigear_linux_arm64.zip"
-      sha256 "7c2f7aec6802f3f1aeab15d9a3c5494904a5b3599b932d8d2756735aa14b6874"
+      url "https://github.com/apigear-io/cli/releases/download/v0.28.3/apigear_linux_arm64.zip"
+      sha256 "0b5f9979b1eec0ceefea3b36d3a1ad2f219dcce904e1060a07c47867b1e85266"
 
       def install
         bin.install "apigear"
