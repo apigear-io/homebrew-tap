@@ -5,20 +5,20 @@
 class Apigear < Formula
   desc ""
   homepage ""
-  version "0.30.2"
+  version "0.31.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/apigear-io/cli/releases/download/v0.30.2/apigear_darwin_arm64.zip"
-      sha256 "864ced8338e95fa60221c0c82298c0377c3f6a9ce361e8a8d36c3804604f8ec0"
+    if Hardware::CPU.intel?
+      url "https://github.com/apigear-io/cli/releases/download/v0.31.0/apigear_darwin_amd64.zip"
+      sha256 "9ec7989024d851ba996005df3f9b2527008ecf592ecdd45d2ba37048bd42a7c2"
 
       def install
         bin.install "apigear"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/apigear-io/cli/releases/download/v0.30.2/apigear_darwin_amd64.zip"
-      sha256 "6a0f02df5e47cd8c49a9c37d0bdc0903b2b3b7d74876706f2082afeac9516944"
+    if Hardware::CPU.arm?
+      url "https://github.com/apigear-io/cli/releases/download/v0.31.0/apigear_darwin_arm64.zip"
+      sha256 "ec4cd21bb0a2333b2d290e3a1e190725961870044d14324ac1f2a3e4ed002b4d"
 
       def install
         bin.install "apigear"
@@ -27,17 +27,17 @@ class Apigear < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/apigear-io/cli/releases/download/v0.30.2/apigear_linux_amd64.zip"
-      sha256 "0e8eea8f1d289088b2fb3f632840fdbf23ffa222bfc26f7f891e1163b25f23ee"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/apigear-io/cli/releases/download/v0.31.0/apigear_linux_arm64.zip"
+      sha256 "76a0ae58531798635ff214fc18d8377850360f6682e76b2e46bb2a8662c0cf17"
 
       def install
         bin.install "apigear"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/apigear-io/cli/releases/download/v0.30.2/apigear_linux_arm64.zip"
-      sha256 "405a192b719a982823282832f3f531368dd48bbd62c0644ea60f54c3c1a16ed7"
+    if Hardware::CPU.intel?
+      url "https://github.com/apigear-io/cli/releases/download/v0.31.0/apigear_linux_amd64.zip"
+      sha256 "2bfe43966fa154da95c7f1cdc78c6e2a6138dcd469dd8b2315b60c85350cc331"
 
       def install
         bin.install "apigear"
