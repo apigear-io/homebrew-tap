@@ -5,20 +5,20 @@
 class Apigear < Formula
   desc ""
   homepage ""
-  version "0.48.0"
+  version "0.48.1"
 
   on_macos do
     on_intel do
-      url "https://github.com/apigear-io/cli/releases/download/v0.48.0/apigear_darwin_amd64.zip"
-      sha256 "8aa0d88a5c93c4adb0aca16a03caac241b9f93c1098557ceabc69f1d2b87b757"
+      url "https://github.com/apigear-io/cli/releases/download/v0.48.1/apigear_darwin_amd64.zip"
+      sha256 "80d6413af74da4bb1dd057caee35862f48fe4e4348f10865d7106666227b183c"
 
       def install
         bin.install "apigear"
       end
     end
     on_arm do
-      url "https://github.com/apigear-io/cli/releases/download/v0.48.0/apigear_darwin_arm64.zip"
-      sha256 "6cc00330ea5e2068bec702fb814a938d7cc29efedbe5165036f567558c0dd795"
+      url "https://github.com/apigear-io/cli/releases/download/v0.48.1/apigear_darwin_arm64.zip"
+      sha256 "0c6a97b6112d787b57b2ec7d3cb83069aea68d3d309165d58109350f972cbcc6"
 
       def install
         bin.install "apigear"
@@ -29,8 +29,8 @@ class Apigear < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/apigear-io/cli/releases/download/v0.48.0/apigear_linux_amd64.zip"
-        sha256 "37459447ff35490a0759329b2a38f49de86fc462a88ac2f65e06cf0542cc7177"
+        url "https://github.com/apigear-io/cli/releases/download/v0.48.1/apigear_linux_amd64.zip"
+        sha256 "99963058374880d8294de79ef9a8c752b0a51f08cda7216d51055415ec27e9e5"
 
         def install
           bin.install "apigear"
@@ -39,8 +39,8 @@ class Apigear < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/apigear-io/cli/releases/download/v0.48.0/apigear_linux_arm64.zip"
-        sha256 "5ab2515efe01a0b48f195250707dff23dc1f837c946be8f0906df55618f09e36"
+        url "https://github.com/apigear-io/cli/releases/download/v0.48.1/apigear_linux_arm64.zip"
+        sha256 "3292d205ea5679f711a15f4b36cc32c38ea2df7b2b3240ca92653eb757536ec6"
 
         def install
           bin.install "apigear"
